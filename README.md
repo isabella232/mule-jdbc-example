@@ -1,4 +1,4 @@
-# Querying a Teradata Vantage database from a Mule service
+# Querying a Teradata Vantage database
 
 This example is a clone of the Mulesoft MySQL sample project. It demonstrates how to query a Teradata database and expose results over REST API.
 
@@ -71,8 +71,12 @@ The database connector instructs the database server to run the SQL query, retri
       01
     );
 	```   
-
-4. Import the JDBC driver to your local Maven repository:
+4. Download the Teradata JDBC driver and unzip it:
+    ```bash
+    wget https://downloads.teradata.com/download/cdn/connectivity/jdbc/17.10.00.24/TeraJDBC__indep_indep.17.10.00.24.zip
+    unzip TeraJDBC__indep_indep.17.10.00.24.zip
+    ```
+5. Import the JDBC driver to your local Maven repository:
     ```bash
     mvn install:install-file \
     -Dfile=dependencies/terajdbc4.jar \
@@ -82,7 +86,7 @@ The database connector instructs the database server to run the SQL query, retri
     -Dpackaging=jar \
     -DgeneratePom=true
     ```
-5. Open the project in Anypoint Studio. 
+6. Open the project in Anypoint Studio. 
     * Once in Anypoint Studio, click on `Import projects..`:
       ![service flow](images/anypoint.import.projects.png "Service Flow")
     * Select `Anypoint Studio project from File System
