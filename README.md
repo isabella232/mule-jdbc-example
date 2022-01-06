@@ -1,4 +1,4 @@
-# Query a Teradata Vantage database from a Mule service
+# Query Teradata Vantage from a Mule service
 
 This example is a clone of the Mulesoft MySQL sample project. It demonstrates how to query a Teradata database and expose results over REST API.
 
